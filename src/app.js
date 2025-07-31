@@ -30,9 +30,11 @@ app.use(cookieParser());
 
 // routes import
 import userRouter from "./routes/user.routes.js";
+import healthCheck from "./routes/healthcheck.routes.js";
 
 // routes declaration
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/health-check", healthCheck);
 // https://localhost:8000/api/v1/users/register
 
 export { app };
